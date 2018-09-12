@@ -46,12 +46,17 @@ public class Praktek1 {
         return hasil [n-1];
     }
     
+    public static void tampilHasil (int n, BigInteger hasil){
+        System.out.println("Bilangan Fibonacci ke-" + hasil);
+    }
+    
     public static void main(String[] args) {
-        String identitas = "nama lengkap / kelas / no";
+        String identitas = "Mochammad Galih Prakasiwi / X RPL 5 / 22";
         
         tampiljudul(identitas);
         int n = tampilinput();
         BigInteger hasil = fibo(n);
+        tampilHasil(n, hasil);
     }
        
     
