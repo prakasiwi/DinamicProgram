@@ -5,6 +5,7 @@
  */
 package dinamicprogram;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -32,11 +33,25 @@ public class Praktek1 {
         return n;
     }
     
+    private static BigInteger fibo(int n){
+        
+        BigInteger[] hasil = new BigInteger[n];
+        
+        hasil[0] = BigInteger.ONE;
+        hasil[1] = BigInteger.ONE;
+        
+        for(int i=0; i < n; i++){
+            hasil[i] = hasil[i-1].add(hasil[i-2]);
+        }
+        return hasil [n-1];
+    }
+    
     public static void main(String[] args) {
         String identitas = "nama lengkap / kelas / no";
         
         tampiljudul(identitas);
         int n = tampilinput();
+        BigInteger hasil = fibo(n);
     }
        
     
