@@ -5,6 +5,8 @@
  */
 package dinamicprogram;
 
+import java.util.Scanner;
+
 /**
  *
  * @author galih
@@ -21,10 +23,20 @@ public class Praktek1 {
         System.out.println("1, 1, 2, 3, 5, 8, 13, 21, ... dst.\n");
     }
     
+    private static  int tampilinput(){
+        Scanner scanner = new Scanner (System.in);
+        
+        System.out.print("Bilangan ke-: ");
+        int n = scanner.nextInt();
+        
+        return n;
+    }
+    
     public static void main(String[] args) {
         String identitas = "nama lengkap / kelas / no";
         
         tampiljudul(identitas);
+        int n = tampilinput();
     }
        
     
