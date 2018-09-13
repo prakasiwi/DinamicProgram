@@ -14,11 +14,8 @@ import java.util.Scanner;
  */
 public class Praktek1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void tampiljudul(String identitas) {
-        System.out.println("Identitas " + identitas);
+        System.out.println("Identitas : " + identitas);
         
         System.out.println("\nHitung Fibonacci");
         System.out.println("1, 1, 2, 3, 5, 8, 13, 21, ... dst.\n");
@@ -40,14 +37,14 @@ public class Praktek1 {
         hasil[0] = BigInteger.ONE;
         hasil[1] = BigInteger.ONE;
         
-        for(int i=0; i < n; i++){
+        for(int i=2; i < n; i++){
             hasil[i] = hasil[i-1].add(hasil[i-2]);
         }
         return hasil [n-1];
     }
     
     public static void tampilHasil (int n, BigInteger hasil){
-        System.out.println("Bilangan Fibonacci ke-" + hasil);
+        System.out.println("Bilangan Fibonacci ke-"+n+ hasil);
     }
     
     public static void main(String[] args) {
